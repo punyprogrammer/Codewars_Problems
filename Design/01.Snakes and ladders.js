@@ -1,6 +1,5 @@
 // https://www.codewars.com/kata/587136ba2eefcb92a9000027/train/javascript
 
-
 class SnakesLadders {
   constructor() {
     this.activePlayer = 1;
@@ -65,16 +64,14 @@ class SnakesLadders {
     }
     // check for win
     if (this.winner) {
-      return `Player ${currentPlayer} Wins!.`;
+      return `Player ${currentPlayer} Wins!`;
     }
     // toggle player and return position
     if (die1 !== die2) {
       this.activePlayer = this.activePlayer === 2 ? 1 : 2;
-     
     }
-//     update position
-     this.player
-     return `Player ${currentPlayer} is on square ${newPosition}`;
+    //     update position
+    this.playerPositions[currentPlayer - 1] = newPosition;
+    return `Player ${currentPlayer} is on square ${newPosition}`;
   }
 }
-
